@@ -134,6 +134,6 @@ paste("plot(interval_weekday$interval, interval_weekday$steps, type = l, xlab = 
 
 ```
 
-![My Figure](weekdays_comp.png)
+(weekdays_comp.png)
 
 This study discovered on average there were more steps taken on the weekends (Saturday - Sunday) as compared to the average number of steps taken during the week (Monday-Friday).
