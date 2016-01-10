@@ -48,7 +48,11 @@ hist(total_steps$steps, xlab = "Total Number of Steps Taken", ylab = "Count", ma
 
 ```{r echo=TRUE}
 summary(total_steps$steps)
+
 ```
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+     41    8841   10760   10770   13290   21190
 
 ##Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
@@ -66,11 +70,21 @@ library(plyr)
 head(arrange(interval, desc(steps)))
 ```
 
+  interval    steps
+1      835 206.1698
+2      840 195.9245
+3      850 183.3962
+4      845 179.5660
+5      830 177.3019
+6      820 171.1509
+
 ##Calculate and report the total number of missing values in the dataset
 
 ```{r echo=TRUE}
 sum(is.na(activity))
 ```
+
+[1] 2304
 
 ##Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
@@ -102,10 +116,16 @@ summary(total_steps$steps)
 
 ```
 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+     41    8841   10760   10770   13290   21190
+
 ```{r echo=TRUE}
 summary(total_steps2$steps)
 
 ```
+
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+     41    6778   10400    9419   12810   21190 
 
 ##What is the impact of imputing missing data on the estimates of the total daily number of steps?
 

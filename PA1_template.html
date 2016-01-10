@@ -96,6 +96,7 @@ total_steps &lt;- aggregate(steps ~ date, data = activity, sum, na.rm=TRUE)</cod
 <pre class="r"><code>summary(total_steps$steps)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##      41    8841   10760   10770   13290   21190</code></pre>
+<p>Min. 1st Qu. Median Mean 3rd Qu. Max. 41 8841 10760 10770 13290 21190</p>
 </div>
 <div id="make-a-time-series-plot-i.e.type-l-of-the-5-minute-interval-x-axis-and-the-average-number-of-steps-taken-averaged-across-all-days-y-axis" class="section level2">
 <h2>Make a time series plot (i.e. type = “l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)</h2>
@@ -115,11 +116,13 @@ head(arrange(interval, desc(steps)))</code></pre>
 ## 4      845 179.5660
 ## 5      830 177.3019
 ## 6      820 171.1509</code></pre>
+<p>interval steps 1 835 206.1698 2 840 195.9245 3 850 183.3962 4 845 179.5660 5 830 177.3019 6 820 171.1509</p>
 </div>
 <div id="calculate-and-report-the-total-number-of-missing-values-in-the-dataset" class="section level2">
 <h2>Calculate and report the total number of missing values in the dataset</h2>
 <pre class="r"><code>sum(is.na(activity))</code></pre>
 <pre><code>## [1] 2304</code></pre>
+<p>[1] 2304</p>
 </div>
 <div id="create-a-new-dataset-that-is-equal-to-the-original-dataset-but-with-the-missing-data-filled-in." class="section level2">
 <h2>Create a new dataset that is equal to the original dataset but with the missing data filled in.</h2>
@@ -144,9 +147,11 @@ hist(total_steps2$steps, xlab = &quot;Total Number of Steps Taken&quot;, ylab = 
 <pre class="r"><code>summary(total_steps$steps)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##      41    8841   10760   10770   13290   21190</code></pre>
+<p>Min. 1st Qu. Median Mean 3rd Qu. Max. 41 8841 10760 10770 13290 21190</p>
 <pre class="r"><code>summary(total_steps2$steps)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##      41    6778   10400    9419   12810   21190</code></pre>
+<p>Min. 1st Qu. Median Mean 3rd Qu. Max. 41 6778 10400 9419 12810 21190</p>
 </div>
 <div id="what-is-the-impact-of-imputing-missing-data-on-the-estimates-of-the-total-daily-number-of-steps" class="section level2">
 <h2>What is the impact of imputing missing data on the estimates of the total daily number of steps?</h2>
